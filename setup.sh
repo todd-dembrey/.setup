@@ -1,3 +1,7 @@
+git pull origin master
+
+sudo bash ./install.sh
+
 repos=(".myconfig" ".emacs.d")
 
 for repo in "${repos[@]}"

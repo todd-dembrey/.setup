@@ -1,0 +1,5 @@
+# elpy requirements
+autopep8
+importmagic
+flake8
+jedi
