@@ -1,21 +1,24 @@
 git pull origin master
 
-sudo bash ./sudo-install.sh
-bash ./install.sh
+SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
+
+sudo bash $SCRIPTPATH/sudo-install.sh
+bash $SCRIPTPATH/install.sh
 
 # Turn off alt key for showing the HUD
 gsettings set org.compiz.integrated show-hud "['']"
 
-repos=(".myconfig" ".emacs.d")
+REPOS=(".myconfig" ".emacs.d")
 
-for repo in "${repos[@]}"
+for REPO in "${REPOS[@]}"
 do
-    if [ ! -d ~/$repo ]; then
-        git clone git@github.com:todd-dembrey/$repo ~/$repo
+    REPO_PATH=$HOME/$REPO
+    if [ ! -d $REPO_PATH ]; then
+        git clone git@github.com:todd-dembrey/$REPO $REPO_PATH
     else
-        git -C ~/$repo  pull origin master
+        git -C $REPO_PATH  pull origin master
     fi
-    if [ -f ~/$repo/setup.sh ]; then
-        bash ~/$repo/setup.sh
+    if [ -f $REPO_PATH/setup.sh ]; then
+        bash $REPO_PATH/setup.sh
     fi
 done
