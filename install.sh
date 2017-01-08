@@ -15,3 +15,11 @@ done
 VERSIONSSTRING=$(IFS= ; echo "${PYVERSIONS[*]}")
 # Set the global value so that the new versions are avaliable 
 pyenv global system $VERSIONSSTRING
+
+
+# Install Powerline fonts
+FONTSPATH=$HOME/.powerlinefonts
+
+git clone git@github.com:powerline/fonts $FONTSPATH
+
+bash $FONTSPATH/install.sh
