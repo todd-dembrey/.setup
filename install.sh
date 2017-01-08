@@ -19,7 +19,9 @@ pyenv global system $VERSIONSSTRING
 
 # Install Powerline fonts
 FONTSPATH=$HOME/.powerlinefonts
+if [ ! -d $FONTSPATH ]; then
+    git clone git@github.com:powerline/fonts $FONTSPATH
 
-git clone git@github.com:powerline/fonts $FONTSPATH
+    bash $FONTSPATH/install.sh
+fi
 
-bash $FONTSPATH/install.sh
