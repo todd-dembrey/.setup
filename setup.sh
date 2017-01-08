@@ -1,6 +1,6 @@
-git pull origin master
-
 SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
+
+git -C $SCRIPTPATH pull origin master
 
 sudo bash $SCRIPTPATH/sudo-install.sh
 bash $SCRIPTPATH/install.sh
