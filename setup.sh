@@ -1,6 +1,7 @@
 git pull origin master
 
-sudo bash ./install.sh
+sudo bash ./sudo-install.sh
+bash ./install.sh
 
 # Turn off alt key for showing the HUD
 gsettings set org.compiz.integrated show-hud "['']"
