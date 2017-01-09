@@ -3,6 +3,11 @@ if [ ! -d ~/.pyenv ]; then
     git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 fi
 
+
+# Refresh shell with new settings for pyenv
+source $HOME/.zshrc
+
+
 #Currently does not handle multiple releases of the same version
 PYVERSIONS=(3.6.0)
 

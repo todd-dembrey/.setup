@@ -1,13 +1,5 @@
 SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
 
-git -C $SCRIPTPATH pull origin master
-
-sudo bash $SCRIPTPATH/sudo-install.sh
-bash $SCRIPTPATH/install.sh
-
-# Turn off alt key for showing the HUD
-gsettings set org.compiz.integrated show-hud "['']"
-
 REPOS=(".myconfig" ".emacs.d")
 
 for REPO in "${REPOS[@]}"
@@ -22,3 +14,12 @@ do
         bash $REPO_PATH/setup.sh
     fi
 done
+
+git -C $SCRIPTPATH pull origin master
+
+sudo bash $SCRIPTPATH/sudo-install.sh
+bash $SCRIPTPATH/install.sh
+
+# Turn off alt key for showing the HUD
+gsettings set org.compiz.integrated show-hud "['']"
+
