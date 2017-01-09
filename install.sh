@@ -31,3 +31,4 @@ if [ ! -d $FONTSPATH ]; then
     bash $FONTSPATH/install.sh
 fi
 
+echo "Installed elements complete"
