@@ -1,5 +1,10 @@
 SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
 
+git -C $SCRIPTPATH pull origin master
+
+sudo bash $SCRIPTPATH/sudo-install.sh
+bash $SCRIPTPATH/install.sh
+
 REPOS=(".myconfig" ".emacs.d")
 
 for REPO in "${REPOS[@]}"
@@ -15,11 +20,5 @@ do
     fi
 done
 
-git -C $SCRIPTPATH pull origin master
-
-sudo bash $SCRIPTPATH/sudo-install.sh
-bash $SCRIPTPATH/install.sh
-
 # Turn off alt key for showing the HUD
 gsettings set org.compiz.integrated show-hud "['']"
-
