@@ -2,5 +2,5 @@
 
 ## Usage
 
-`sh setup.sh`
+`. setup.sh`
 
