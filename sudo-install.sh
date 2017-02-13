@@ -5,6 +5,9 @@ python2 -m pip install --upgrade pip
 
 python3 -m  pip install --upgrade pip
 
+# Install virtualenvwrapper
+pip install virtualenvwrapper
+
 # Install Emacs
 apt-get install -y  emacs
 
