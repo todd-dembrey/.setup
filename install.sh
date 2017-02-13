@@ -31,4 +31,7 @@ if [ ! -d $FONTSPATH ]; then
     bash $FONTSPATH/install.sh
 fi
 
+# Install oh my zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 echo "Installed elements complete"
