@@ -8,7 +8,7 @@ bash $SCRIPTPATH/install.sh
 # Turn off alt key for showing the HUD
 gsettings set org.compiz.integrated show-hud "['']"
 
-REPOS=(".myconfig" ".emacs.d")
+REPOS=(".myconfig")
 
 for REPO in "${REPOS[@]}"
 do
@@ -22,3 +22,7 @@ do
         bash $REPO_PATH/setup.sh
     fi
 done
+
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+. ./install_font
