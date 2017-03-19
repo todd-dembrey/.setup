@@ -3,16 +3,22 @@ if [ ! -d ~/.pyenv ]; then
     git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 fi
 
+
+# Refresh shell with new settings for pyenv
+source $HOME/.zshrc
+
+
+#Currently does not handle multiple releases of the same version
 PYVERSIONS=(3.6.0)
 
 for PYTHON in "${PYVERSIONS[@]}"
 do
     # Install python and skip if existing
-    pyenv install -s $PYTHON
+    pyenv install -s $PYTHON  
 done
 
 # Concatenate the versions into a single string
-VERSIONSSTRING=$(IFS= ; echo "${PYVERSIONS[*]}")
+VERSIONSSTRING=$(printf "%s" "${PYVERSIONS[@]}") 
 # Set the global value so that the new versions are avaliable 
 pyenv global system $VERSIONSSTRING
 
@@ -25,3 +31,7 @@ if [ ! -d $FONTSPATH ]; then
     bash $FONTSPATH/install.sh
 fi
 
+# Install oh my zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "Installed elements complete"

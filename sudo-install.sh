@@ -5,6 +5,9 @@ python2 -m pip install --upgrade pip
 
 python3 -m  pip install --upgrade pip
 
+# Install virtualenvwrapper
+pip install virtualenvwrapper
+
 # Install Emacs
 apt-get install -y  emacs
 
@@ -24,3 +27,5 @@ apt-get install gdal-bin libgdal-dev
 apt-get install postgis
 apt-get install postgresql-9.6 postgresql-9.6-postgis-scripts postgresql-server-dev-9.6 python-psycopg2
 
+# Install other software
+apt-get install vim zsh
