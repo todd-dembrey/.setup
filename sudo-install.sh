@@ -28,4 +28,4 @@ apt-get install postgis
 apt-get install postgresql-9.6 postgresql-9.6-postgis-scripts postgresql-server-dev-9.6 python-psycopg2
 
 # Install other software
-apt-get install vim zsh
+apt-get install vim zsh tmux
